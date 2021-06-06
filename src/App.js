@@ -20,29 +20,31 @@ import DirectionsRunIcon from "@material-ui/icons/DirectionsRun";
 import WebIcon from "@material-ui/icons/Web";
 import ExposurePlus1Icon from "@material-ui/icons/ExposurePlus1";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
-import FileCopyIcon from "@material-ui/icons/FileCopy";
-import StorageIcon from "@material-ui/icons/Storage";
 import CodeIcon from "@material-ui/icons/Code";
 import VideogameAssetIcon from "@material-ui/icons/VideogameAsset";
-import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
 import BlockIcon from "@material-ui/icons/Block";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import SettingsOverscanIcon from "@material-ui/icons/SettingsOverscan";
+import Filter1Icon from "@material-ui/icons/Filter1";
+import Filter2Icon from "@material-ui/icons/Filter2";
+import Filter3Icon from "@material-ui/icons/Filter3";
+import Filter4Icon from "@material-ui/icons/Filter4";
 
 import {
   Calculator,
   Event,
   Files,
-  Files_2,
   Interface,
   Introduction,
-  MySQL,
   Layout,
   Game,
   Lockdown,
   CreateInterface,
   Automation,
-  Game_2,
+  Test_1,
+  Test_2,
+  Test_3,
+  Test_4,
 } from "./components";
 
 const drawerWidth = 320;
@@ -230,30 +232,40 @@ function App() {
             <ListItemIcon>
               <InsertDriveFileIcon />
             </ListItemIcon>
-            <ListItemText primary={"Работа с файлами №1"} />
+            <ListItemText primary={"Работа с файлами"} />
           </ListItem>
+        </List>
+        <hr width={"100%"} />
+        <List>
           <ListItem button onClick={() => setPage(10)}>
             <ListItemIcon>
-              <FileCopyIcon />
+              <Filter1Icon />
             </ListItemIcon>
-            <ListItemText primary={"Работа с файлами №2"} />
+            <ListItemText primary={"Тест №1"} />
           </ListItem>
           <ListItem button onClick={() => setPage(11)}>
             <ListItemIcon>
-              <StorageIcon />
+              <Filter2Icon />
             </ListItemIcon>
-            <ListItemText primary={"Работа с MySQL"} />
+            <ListItemText primary={"Тест №2"} />
           </ListItem>
           <ListItem button onClick={() => setPage(12)}>
             <ListItemIcon>
-              <SportsEsportsIcon />
+              <Filter3Icon />
             </ListItemIcon>
-            <ListItemText primary={"Игра №2"} />
+            <ListItemText primary={"Тест №3"} />
+          </ListItem>
+          <ListItem button onClick={() => setPage(13)}>
+            <ListItemIcon>
+              <Filter4Icon />
+            </ListItemIcon>
+            <ListItemText primary={"Тест №4"} />
           </ListItem>
         </List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
+        {/*main*/}
         {page === 0 && <Introduction />}
         {page === 1 && <Event />}
         {page === 2 && <Interface />}
@@ -264,9 +276,11 @@ function App() {
         {page === 7 && <Automation />}
         {page === 8 && <CreateInterface />}
         {page === 9 && <Files />}
-        {page === 10 && <Files_2 />}
-        {page === 11 && <MySQL />}
-        {page === 12 && <Game_2 />}
+        {/*test*/}
+        {page === 10 && <Test_1 />}
+        {page === 11 && <Test_2 />}
+        {page === 12 && <Test_3 />}
+        {page === 13 && <Test_4 />}
       </main>
     </div>
   );
