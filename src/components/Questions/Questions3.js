@@ -44,7 +44,7 @@ export default function Questions3({ getValue }) {
           label="select * from class MyClass {}"
         />
         <FormControlLabel
-          value="3"
+          value="4"
           control={<Radio />}
           label="MyClass extends class {}"
         />
